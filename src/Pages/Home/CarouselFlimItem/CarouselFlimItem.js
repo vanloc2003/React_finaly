@@ -70,9 +70,13 @@ const ListMovie = () => {
       >
         {movieSapChieu.map(({ hinhAnh, maPhim, moTa, trailer }, index) => {
           return (
-            <SwiperSlide key={index} className="mb-10">
-              <div className="group">
-                <img src={hinhAnh} className="relative" alt="" />
+            <SwiperSlide key={index} className="mb-10 min-h-[400px]">
+              <div className="group relative w-full h-[400px] overflow-hidden rounded-md shadow-md hover:scale-105 transition-transform duration-300">
+                <img
+                  src={hinhAnh}
+                  className="relative w-full h-[400px] object-cover rounded-md"
+                  alt=""
+                />
                 <div className="hidden group-hover:block absolute top-0 left-0 bottom-0 right-0 bg-[rgba(0,0,0,0.6)]">
                   <p className="text-white text-justify overflow-hidden whitespace-pre-wrap h-52">
                     {moTa}
